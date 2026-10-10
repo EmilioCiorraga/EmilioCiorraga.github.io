@@ -1,7 +1,7 @@
 # Portfolio de Emilio Ciorraga Albalat
 
 Portfolio con React, TypeScript y Vite. Incluye el Hero con composición a la
-izquierda, Experiencia con las dos etapas en Viewnext, S.A. y My Gifts como proyecto
+izquierda, Experiencia con Viewnext y sus dos proyectos profesionales, y My Gifts como proyecto
 destacado, Tecnologías agrupadas en cuatro categorías y Contacto. El resto de secciones
 se implementará de forma incremental.
 

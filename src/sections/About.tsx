@@ -6,13 +6,16 @@ export default function About() {
       <h2 id="about-title">Sobre mí</h2>
       <div className="about__content">
         <p>
-          Mi formación empezó en Sistemas Microinformáticos y Redes y continuó en
-          Desarrollo de Aplicaciones Web. En VIEWNEXT pasé de las prácticas duales
-          a incorporarme como desarrollador Full Stack en julio de 2025.
+          Soy Emilio, desarrollador Full Stack con experiencia principalmente en Java,
+          Spring Boot, React y TypeScript. He trabajado en aplicaciones empresariales,
+          integraciones entre sistemas y desarrollo de funcionalidades tanto backend
+          como frontend.
         </p>
         <p>
-          Trabajo en frontend y backend, en aplicaciones del ámbito sanitario e
-          integraciones entre sistemas. También desarrollo My Gifts, un proyecto
+          Mi formación empezó en Sistemas Microinformáticos y Redes y continuó en
+          Desarrollo de Aplicaciones Web. En Viewnext pasé de las prácticas duales
+          al equipo de desarrollo, entre junio de 2024 y septiembre de 2026.
+          También desarrollo My Gifts, un proyecto
           personal con el que he llevado una aplicación móvil a Android e iOS.
         </p>
         <p>

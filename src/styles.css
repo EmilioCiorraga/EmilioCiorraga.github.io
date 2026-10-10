@@ -177,6 +177,7 @@ button:focus-visible {
   width: min(100%, 76rem);
   margin-inline: auto;
   padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 6vw, 4rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
 .experience h2,
@@ -200,10 +201,20 @@ button:focus-visible {
 }
 
 .experience__company-heading h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin: 0;
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.025em;
+}
+
+.experience__company-logo {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .experience__company-heading p {
@@ -214,58 +225,35 @@ button:focus-visible {
   line-height: 1.7;
 }
 
-.experience__timeline {
-  list-style: none;
+.experience__intro {
   margin: 0;
-  padding: 0;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  line-height: 1.75;
 }
 
-.experience__stage {
-  position: relative;
+.experience__cases {
+  display: grid;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+
+.experience__case {
+  min-width: 0;
   padding-left: 2rem;
+  border-left: 1px solid #d9dfe3;
 }
 
-.experience__stage:not(:last-child) {
-  padding-bottom: 3rem;
-}
-
-.experience__stage:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 0.25rem;
-  top: 0.75rem;
-  bottom: -0.75rem;
-  width: 1px;
-  background: #d9dfe3;
-}
-
-.experience__stage::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 0.4375rem;
-  width: 0.5625rem;
-  height: 0.5625rem;
-  border: 1px solid #788594;
-  border-radius: 50%;
-  background: #fafaf7;
-}
-
-.experience__stage--current::before {
-  border-color: var(--color-accent);
-  background: var(--color-accent);
-}
-
-.experience__period {
-  margin: 0 0 0.75rem;
+.experience__company-heading .experience__period {
+  max-width: none;
+  margin-top: 1rem;
   color: var(--color-muted);
   font-family: var(--font-mono);
   font-size: 0.75rem;
   line-height: 1.8;
 }
 
-.experience__stage h4 {
+.experience__case h4 {
   margin: 0;
   font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: 550;
@@ -273,8 +261,14 @@ button:focus-visible {
   line-height: 1.4;
 }
 
+.experience__contribution-title {
+  margin: 1.5rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
 .experience__responsibilities {
-  margin: 1.25rem 0 0;
+  margin: 0.75rem 0 0;
   padding-left: 1.125rem;
   color: var(--color-muted);
   font-size: 0.9375rem;
@@ -313,7 +307,7 @@ button:focus-visible {
     max-width: 36ch;
   }
 
-  .experience__stage {
+  .experience__case {
     padding-left: 1.5rem;
   }
 }
@@ -323,6 +317,22 @@ button:focus-visible {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
   gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.project + .project {
+  margin-top: clamp(4rem, 8vw, 7rem);
+}
+
+.project--text {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project--text .project__content {
+  max-width: 43rem;
+}
+
+.project--text .project__tagline {
+  max-width: none;
 }
 
 .project__category,
@@ -361,27 +371,26 @@ button:focus-visible {
   letter-spacing: -0.02em;
 }
 
-.project__description,
-.project__contribution p {
+.project__description {
   margin: 0;
   color: var(--color-muted);
   font-size: 0.9375rem;
   line-height: 1.75;
 }
 
-.project__contribution {
-  margin-block: 2rem;
+.project__description + .project__description {
+  margin-top: 1rem;
 }
 
-.project__contribution h4 {
-  margin: 0 0 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+.project__technologies {
+  margin-top: 1.5rem;
 }
 
-.project__contribution .project__ai {
-  margin-top: 0.75rem;
+.project__ai {
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
   font-size: 0.8125rem;
+  line-height: 1.75;
 }
 
 .project__links {
